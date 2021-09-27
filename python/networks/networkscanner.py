@@ -2,6 +2,7 @@
 from scapy.all import ARP, Ether, srp
 
 #Scanner that neatly outputs all online devices
+#don't forget to install scapy. For ubuntu: sudo apt install python3-scapy
 
 scanfile = "scan.txt"
 target = "192.168.2.254/24"

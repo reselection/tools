@@ -1,2 +1,11 @@
-Tools for automation, hacking and administration
-Currently looking to make tools in Python, bash and powershell.
+Tools for Administration, automation and security.
+
+Languages being used:
+ - Python
+ - Bash
+ - Powershell
+
+Catagories:
+ - Networks
+ - Security
+ - User-Management
