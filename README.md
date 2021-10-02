@@ -9,3 +9,5 @@ Catagories:
  - Networks
  - Security
  - User-Management
+ - Storage
+ - Performance
