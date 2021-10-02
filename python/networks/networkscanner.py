@@ -4,7 +4,6 @@ from scapy.all import ARP, Ether, srp
 #Scanner that neatly outputs all online devices
 #don't forget to install scapy. For ubuntu: sudo apt install python3-scapy
 
-scanfile = "scan.txt"
 target = "192.168.2.254/24"
 arp = ARP(pdst=target)
 #Creates ARP packet
@@ -20,7 +19,7 @@ for send, recieved in result:
     #append IP and mac address to clients list per response
     clients.append({"ip": recieved.psrc, "mac": recieved.hwsrc})
 
-print("Found devices:")
+print(f"Found {len(clients)} devices:")
 print("IP" + " "*18+"MAC")
 
 
