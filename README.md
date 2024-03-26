@@ -11,3 +11,6 @@ Catagories:
  - User-Management
  - Storage
  - Performance
+
+In progress:
+ - Powershell network scanning
