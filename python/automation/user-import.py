@@ -8,7 +8,7 @@ if platform in('linux','linux2'):
     pass
 elif platform not in ('linux','linux2'):
     print(f'This script does not support',platform)
-    #exit()
+    exit()
 
 ## Script for csv user creation, adds to group, sets shell & home
 ## Linux
@@ -29,11 +29,21 @@ def import_file(user_file):
 
 
 def create_users(users):
-    verbose = input("Verbose? Y/n: ").lower()
+    ## Creates users from the CSV file provided.
+    for user in users:
+        try:
+            subprocess.run([
+                "useradd",
+                "-m",
+                "-d", user['home_dir'],
+                "-s", user['shell'],
+                "-g", user['group'],
+                "-c", user['full_name'],
+                user['username']
+            ])
+        except:
+            print("Error adding users.")
 
-    if verbose == 'y':
-        for user in users:
-            subprocess.run(['echo', f"{user['username']}"])
 
 def delete_users(*args):
     pass
