@@ -1,41 +1,34 @@
 import subprocess
 import csv
-
+from sys import platform
 
 ## Checks the OS, this script will only work on Linux.
-from sys import platform
-if platform in('linux','linux2'):
-    pass
-elif platform not in ('linux','linux2'):
-    print(f'This script does not support',platform)
+if platform not in ('linux', 'linux2'):
+    print(f'This script does not support {platform}')
     exit()
 
 ## Script for csv user creation, adds to group, sets shell & home
 ## Linux
 
 def import_file(user_file):
-    ## Main function
     ## Prepares and opens the file for data manipulation.
-    ## Sends data over to other functions depending on input supplied
     with open(user_file) as data:
         userdata = csv.DictReader(data)
         rows = list(userdata)
     
     ## Checks if groups exist
-    for group in rows:
-        result = subprocess.run(['getent', 'group', group], capture_output=True)
+    for row in rows:
+        group_name = row['group']
+        result = subprocess.run(['getent', 'group', group_name], capture_output=True)
         if result.returncode != 0:
-            create_group(group)
-    ##
+            create_group(group_name)
 
-    ##
-
+    ## Ask add/remove
     option = input("Add or remove users? (add / remove) ").lower()
-    if option in('add','a'):
+    if option in ('add', 'a'):
         create_users(rows)
-    elif option in ('remove','r'):
+    elif option in ('remove', 'r'):
         delete_users(rows)
-
 
 def create_users(users):
     ## Ask verbose once
@@ -58,7 +51,6 @@ def create_users(users):
             print(f"Failed to add {user['username']}")
             continue
 
-
 def delete_users(users):
     check = input("Delete ALL users from CSV? Y/n: ").lower()
     if check != 'y':
@@ -75,14 +67,12 @@ def delete_users(users):
             check=True
         )
 
-def create_group(group):
-    ## Create group if doesn't exist
-    for data in group:
-        try:
-            subprocess.run('groupadd',data['group'])
-        except:
-            print("Group already exists")
-            continue
+def create_group(group_name):
+    try:
+        subprocess.run(['groupadd', group_name], check=True)
+        print(f"Group created: {group_name}")
+    except subprocess.CalledProcessError:
+        print(f"Group already exists or failed to create: {group_name}")
 
 def remove_users_group(*args):
     pass
