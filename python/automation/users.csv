@@ -1,0 +1,51 @@
+username,full_name,email,group,shell,home_dir,sudo,expiry
+michael71,Katherine Maynard,michael71@example.com,ops,/bin/sh,/home/michael71,no,2026-07-03
+ambersanchez,Joseph Cox,ambersanchez@example.com,ops,/bin/sh,/home/ambersanchez,no,2026-02-23
+sototimothy,Megan Mcfarland,sototimothy@example.com,dev,/bin/zsh,/home/sototimothy,no,2026-03-17
+michael01,Deanna Thompson,michael01@example.com,marketing,/bin/zsh,/home/michael01,yes,2026-08-08
+linda49,Kathryn Hall,linda49@example.com,hr,/bin/sh,/home/linda49,yes,2025-11-29
+tanderson,Sabrina Ballard,tanderson@example.com,finance,/bin/sh,/home/tanderson,no,2025-10-18
+vrobinson,Isabel Carter,vrobinson@example.com,hr,/bin/zsh,/home/vrobinson,yes,2025-12-07
+deborah43,Danielle Hall,deborah43@example.com,hr,/bin/sh,/home/deborah43,no,2025-11-25
+pamelanguyen,Erica Shaw,pamelanguyen@example.com,ops,/bin/bash,/home/pamelanguyen,yes,2026-04-09
+maryshah,Beverly Farley,maryshah@example.com,hr,/bin/sh,/home/maryshah,yes,2026-05-20
+ngreer,Laura Manning,ngreer@example.com,finance,/bin/bash,/home/ngreer,no,2025-11-03
+emily37,Maria Santana,emily37@example.com,marketing,/bin/bash,/home/emily37,no,2026-08-10
+michellerich,Clifford Bray,michellerich@example.com,marketing,/bin/bash,/home/michellerich,yes,2025-12-05
+mrichard,Brian Butler,mrichard@example.com,ops,/bin/bash,/home/mrichard,yes,2026-03-02
+jacobbrooks,Janice Miles,jacobbrooks@example.com,finance,/bin/zsh,/home/jacobbrooks,yes,2025-11-06
+abigail89,Robert Vega,abigail89@example.com,marketing,/bin/sh,/home/abigail89,no,2026-01-31
+amanda30,Rebekah Gibbs,amanda30@example.com,dev,/bin/zsh,/home/amanda30,no,2025-09-30
+brett08,Jose Chavez,brett08@example.com,finance,/bin/bash,/home/brett08,yes,2026-01-13
+mark39,Joshua Ross PhD,mark39@example.com,finance,/bin/bash,/home/mark39,yes,2025-11-06
+lewisrobert,Victoria Daniel,lewisrobert@example.com,dev,/bin/zsh,/home/lewisrobert,yes,2025-11-01
+robert81,Emily Castillo,robert81@example.com,ops,/bin/sh,/home/robert81,no,2026-06-08
+kelliwhite,Mr. Adam Nelson,kelliwhite@example.com,ops,/bin/sh,/home/kelliwhite,yes,2026-03-15
+lammarissa,Eric Ferguson,lammarissa@example.com,hr,/bin/sh,/home/lammarissa,no,2026-02-17
+dawnparsons,Jason Thomas,dawnparsons@example.com,hr,/bin/zsh,/home/dawnparsons,yes,2026-04-01
+davidroy,Matthew Smith,davidroy@example.com,dev,/bin/sh,/home/davidroy,no,2026-01-16
+martin79,Jennifer Roach,martin79@example.com,marketing,/bin/bash,/home/martin79,yes,2026-04-08
+adamlewis,Mark Smith,adamlewis@example.com,finance,/bin/sh,/home/adamlewis,no,2026-05-24
+nsmith,Steven Flores,nsmith@example.com,hr,/bin/bash,/home/nsmith,yes,2026-02-16
+wking,Daisy Ryan,wking@example.com,hr,/bin/zsh,/home/wking,yes,2026-05-17
+holdencourtney,Adam Sanchez,holdencourtney@example.com,marketing,/bin/bash,/home/holdencourtney,no,2026-01-11
+derrick30,Alan Mullen,derrick30@example.com,dev,/bin/zsh,/home/derrick30,no,2025-11-16
+morenojohn,Mark Blair,morenojohn@example.com,finance,/bin/bash,/home/morenojohn,yes,2025-12-09
+jason40,Dr. David Brown,jason40@example.com,marketing,/bin/bash,/home/jason40,yes,2026-06-24
+norristhomas,Michelle Thompson,norristhomas@example.com,dev,/bin/sh,/home/norristhomas,yes,2026-07-28
+melissa70,Betty Bishop,melissa70@example.com,finance,/bin/bash,/home/melissa70,no,2025-10-22
+reyestyler,Tammy Salinas,reyestyler@example.com,hr,/bin/zsh,/home/reyestyler,yes,2026-03-28
+mlopez,Mr. John Vaughn,mlopez@example.com,finance,/bin/bash,/home/mlopez,yes,2025-10-12
+bradleykelly,Kevin Harris,bradleykelly@example.com,marketing,/bin/zsh,/home/bradleykelly,no,2026-05-14
+melissa50,Cynthia Morton,melissa50@example.com,finance,/bin/zsh,/home/melissa50,yes,2025-11-07
+kmoreno,Karen Holloway,kmoreno@example.com,finance,/bin/bash,/home/kmoreno,no,2026-02-11
+erin88,Bryan Watkins,erin88@example.com,hr,/bin/sh,/home/erin88,yes,2025-11-17
+cheryl02,Natalie Hernandez,cheryl02@example.com,ops,/bin/bash,/home/cheryl02,no,2026-01-07
+wilsonmallory,Joseph Vance,wilsonmallory@example.com,ops,/bin/bash,/home/wilsonmallory,no,2026-07-22
+hendersongabriel,Cody Riley,hendersongabriel@example.com,ops,/bin/sh,/home/hendersongabriel,no,2026-03-17
+youngkelly,Alicia Clark,youngkelly@example.com,hr,/bin/zsh,/home/youngkelly,yes,2026-08-07
+olsonhannah,Casey Johnson,olsonhannah@example.com,marketing,/bin/zsh,/home/olsonhannah,yes,2025-11-21
+thomassergio,Anna Simmons,thomassergio@example.com,marketing,/bin/sh,/home/thomassergio,yes,2025-10-01
+michelle05,Becky Peterson,michelle05@example.com,ops,/bin/zsh,/home/michelle05,yes,2026-08-10
+michael99,Ricky Patterson,michael99@example.com,dev,/bin/bash,/home/michael99,yes,2025-10-12
+johnsonjonathan,Matthew Flynn,johnsonjonathan@example.com,dev,/bin/sh,/home/johnsonjonathan,no,2026-03-26
