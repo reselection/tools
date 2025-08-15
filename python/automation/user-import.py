@@ -67,7 +67,7 @@ def delete_users(users):
                     print(f"Deleting user: {user['username']}")
                     subprocess.run()[
                         "deluser",
-                        "--remove-home"
+                        "--remove-home",
                         user['username']
                         ]
                 else:
