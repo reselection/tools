@@ -2,6 +2,7 @@ import os
 import subprocess
 import csv
 
+
 ## Checks the OS, this script will only work on Linux.
 from sys import platform
 if platform in('linux','linux2'):
@@ -22,7 +23,7 @@ def import_file(user_file):
         rows = list(userdata)
     
     ## Checks if groups exist
-    for group in groups:
+    for group in rows:
         result = subprocess.run(['getent', 'group', group], capture_output=True)
         if result.returncode != 0:
             create_group(group)
@@ -40,14 +41,11 @@ def import_file(user_file):
 def create_users(users):
     ## Ask verbose once
     verbose = input("Verbose Y/n: ").lower() == 'y'
-
     for user in users:
-
         if verbose:
             print(f"Adding user: {user['username']}")
 
         result = subprocess.run([
-            "sudo",
             "useradd",
             "-m",
             "-d", user['home_dir'],
@@ -66,12 +64,14 @@ def delete_users(*args):
     pass
 
 
-def create_group(group_names):
-    for group in group_names:
-        result = subprocess.run(['groupadd', group])
-        if result.returncode != 0:
-            print(f"Failed to create group '{group}' (may already exist)")
-
+def create_group(group):
+    ## Create group if doesn't exist
+    for data in group:
+        try:
+            subprocess.run('groupadd',data['group'])
+        except:
+            print("Group already exists")
+            continue
 
 def remove_users_group(*args):
     pass
