@@ -58,21 +58,21 @@ def create_users(users):
             print(f"Failed to add {user['username']}")
             continue
 
-
 def delete_users(users):
-        ## Deletes all users in CSV file
-        for user in users:
-                check = input("Are you sure you want to delete all users in CSV file?: Y/n").lower()
-                if check == 'y':
-                    print(f"Deleting user: {user['username']}")
-                    subprocess.run()[
-                        "deluser",
-                        "--remove-home",
-                        user['username']
-                        ]
-                else:
-                    print("Aborting...")
-                    exit()
+    ## Confirm once
+    check = input("Are you sure you want to delete all users in CSV file?: Y/n ").lower()
+    if check != 'y':
+        print("Aborting...")
+        return
+
+    ## Deletes all users in CSV file
+    for user in users:
+        print(f"Deleting user: {user['username']}")
+        subprocess.run([
+            "deluser",
+            "--remove-home",
+            user['username']
+        ])
 
 
 def create_group(group):
