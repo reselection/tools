@@ -1,4 +1,3 @@
-import os
 import subprocess
 import csv
 
@@ -60,8 +59,16 @@ def create_users(users):
             continue
 
 
-def delete_users(*args):
-    pass
+def delete_users(users):
+        ## Deletes all users in CSV file
+        for user in users:
+            if verbose:
+                print(f"Deleting user: {user['username']}")
+                subprocess.run()[
+                    "deluser",
+                    "--remove-home"
+                    user['username']
+                ]
 
 
 def create_group(group):
