@@ -20,7 +20,16 @@ def import_file(user_file):
     with open(user_file) as data:
         userdata = csv.DictReader(data)
         rows = list(userdata)
- 
+    
+    ## Checks if groups exist
+    for group in groups:
+        result = subprocess.run(['getent', 'group', group], capture_output=True)
+        if result.returncode != 0:
+            create_group(group)
+    ##
+
+    ##
+
     option = input("Add or remove users? (add / remove) ").lower()
     if option in('add','a'):
         create_users(rows)
@@ -33,11 +42,12 @@ def create_users(users):
     verbose = input("Verbose Y/n: ").lower() == 'y'
 
     for user in users:
+
         if verbose:
             print(f"Adding user: {user['username']}")
 
         result = subprocess.run([
-            "sudo"
+            "sudo",
             "useradd",
             "-m",
             "-d", user['home_dir'],
@@ -55,8 +65,13 @@ def create_users(users):
 def delete_users(*args):
     pass
 
-def add_users_group(*args):
-    pass
+
+def create_group(group_names):
+    for group in group_names:
+        result = subprocess.run(['groupadd', group])
+        if result.returncode != 0:
+            print(f"Failed to create group '{group}' (may already exist)")
+
 
 def remove_users_group(*args):
     pass
