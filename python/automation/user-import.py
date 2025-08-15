@@ -29,20 +29,27 @@ def import_file(user_file):
 
 
 def create_users(users):
-    ## Creates users from the CSV file provided.
+    ## Ask verbose once
+    verbose = input("Verbose Y/n: ").lower() == 'y'
+
     for user in users:
-        try:
-            subprocess.run([
-                "useradd",
-                "-m",
-                "-d", user['home_dir'],
-                "-s", user['shell'],
-                "-g", user['group'],
-                "-c", user['full_name'],
-                user['username']
-            ])
-        except:
-            print("Error adding users.")
+        if verbose:
+            print(f"Adding user: {user['username']}")
+
+        result = subprocess.run([
+            "sudo"
+            "useradd",
+            "-m",
+            "-d", user['home_dir'],
+            "-s", user['shell'],
+            "-g", user['group'],
+            "-c", user['full_name'],
+            user['username']
+        ])
+
+        if result.returncode != 0:
+            print(f"Failed to add {user['username']}")
+            continue
 
 
 def delete_users(*args):
