@@ -62,13 +62,17 @@ def create_users(users):
 def delete_users(users):
         ## Deletes all users in CSV file
         for user in users:
-            if verbose:
-                print(f"Deleting user: {user['username']}")
-                subprocess.run()[
-                    "deluser",
-                    "--remove-home"
-                    user['username']
-                ]
+                check = input("Are you sure you want to delete all users in CSV file?: Y/n").lower()
+                if check == 'y':
+                    print(f"Deleting user: {user['username']}")
+                    subprocess.run()[
+                        "deluser",
+                        "--remove-home"
+                        user['username']
+                        ]
+                else:
+                    print("Aborting...")
+                    exit()
 
 
 def create_group(group):
