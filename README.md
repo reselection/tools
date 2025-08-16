@@ -13,4 +13,4 @@ Catagories:
  - Performance
 
 In progress:
- - Powershell network scanning
+ - Python program for user management.
