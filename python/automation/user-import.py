@@ -67,14 +67,5 @@ def delete_users(users):
             check=True
         )
 
-def create_group(group_name):
-    try:
-        subprocess.run(['groupadd', group_name], check=True)
-        print(f"Group created: {group_name}")
-    except subprocess.CalledProcessError:
-        print(f"Group already exists or failed to create: {group_name}")
-
-def remove_users_group(*args):
-    pass
 
 import_file('users.csv')
